@@ -1,0 +1,317 @@
+@import "icono.styl"
+body
+	background-color #f3f3f3
+	color #444
+	font-family  'Chewy', cursive
+
+
+/***Header***/
+header h1
+	font-size 20px
+	margin 0
+	padding 0
+	width 100%
+	
+header #bienvenida, header #social, header #logo
+	display inline-block
+	vertical-align top
+
+header #social
+	margin-top 1em	
+
+header #bienvenida
+	width 70%
+
+#logo
+	padding 4px
+	margin 4px
+	border-radius 10%
+	background-color #f3f3f3
+	img
+		height 40px
+		width 40px
+
+#bienvenida
+	h1 pfile:
+		margin 0
+		padding 0
+#bienvenida p
+	font-size 14px
+	margin 0
+	padding 0
+#header
+	background-color #444
+	color #f3f3f3
+
+#social 
+	display inline-block
+	vertical-align top
+	a
+		color #f3f3f3
+		display inline-block
+		font-size 30px
+		text-decoration none
+		vertical-align top
+/***************************/
+
+
+/***menu***/
+#menu 
+	background-color #444
+	display none
+	margin
+	padding 0
+	position absolute
+	width 100%
+	ul
+		margin 0
+		padding 0
+		li
+			margin 0
+			padding 0
+			display block
+			a
+				float left
+				display block
+				font-size 20px
+				color #f3f3f3
+				padding-bottom 10px
+				position relative
+			
+#menuD
+	background-color #444
+	ul
+		margin-top -10px
+		padding 7px;
+		li
+			text-decoration none
+			display inline-block
+			padding 1em;
+			a
+				text-decoration none
+				color #f3f3f3
+				font-size 20px
+#imagen
+	margin 0
+	padding 0
+	margin-bottom 0
+	section
+		padding 0
+		margin 0
+	article
+		padding 0
+		margin 0
+	img
+		padding 0
+		height 100%
+		margin-top 0
+		width 100%
+#menuI
+	visibility hidden
+	margin-top 1em
+	li
+		text-decoration none
+		display inline-block
+		vertical-align top
+		padding-left 3em
+		img
+			height 20px
+			width 20px	
+
+#universidades
+		right 40px
+		margin-top 50px
+		padding 0
+		position absolute
+		ul
+			margin 0
+			padding 0
+			li
+				text-decoration none
+				margin 0
+				padding 0
+				display block
+				a
+					text-decoration none
+					color #444
+					font-size 25px;
+					top 0
+					position relative
+
+
+	#contenido
+		vertical-align top
+		display inline-block
+		padding 0em
+		article
+			padding 0
+			margin-top 4em
+			margin-right 10em
+			margin-bottom 5em
+			margin-left 6em
+		#publicacion
+			margin 0
+			padding 0
+		#avatar
+			margin 0
+			padding 0
+			float right
+			border-radius 50%
+			color #444
+			height 60px
+			width 60px
+		h2
+			font-size 18px
+		p
+			font-size 12px
+		#respuesta
+			width 100%
+			border 2px solid dashed
+			#PRespuesta form p input
+				display inline-block
+				vertical-align top
+			#PRespuesta
+				display inline-block
+				margin 0
+				padding 0
+				vertical-align top
+				p
+					input 
+						font-size 12px;
+						float left
+				input
+					float right
+					font-size 15px;
+
+
+
+
+
+/*Medias querys*/
+
+@media screen and (max-width:520px)
+	#header
+		font-size 14px
+		#bienenida p
+			font-size 12px
+			margin 0
+			padding 0
+		#social
+			visibility hidden
+		#social a
+			font-size 15px
+	#menu
+		margin-top -8px
+		display block
+		ul
+			margin-top 0	
+	#menuD
+		display none
+		margin-top 35px;
+	#imagen
+		img
+			padding 0
+			margin-top 0
+	#menuI 
+		left 0
+		margin-top 50px
+		padding 0
+		position absolute
+		ul
+			margin 0
+			padding 0
+			li
+				margin 0
+				padding 0
+				display block
+				img
+					left 0
+					top 0
+					position relative
+					width 14px
+					height 14px
+	#universidades
+		right 0
+		margin-top 50px
+		padding 0
+		position absolute
+		ul
+			margin 0
+			padding 0
+			li
+				text-decoration none
+				margin 0
+				padding 0
+				display block
+				a
+					font-size 12px
+					text-decoration none
+					color #444
+					right 20px;
+					top 0
+					position relative		
+	#contenido
+		vertical-align top
+		display inline-block
+		padding 0em
+		article
+			padding 0
+			margin-top 64px
+			margin-right 80px
+			margin-bottom 48px
+			margin-left 32px
+		#publicacion
+			border 2px solid 
+			margin 0
+			padding 0
+		#avatar
+			margin 0
+			padding 0
+			float right
+			border  1px dashed
+			border-radius 50%
+			color #444
+			height 30px
+			width 30px
+		h2
+			font-size 10px
+		p
+			font-size 8px
+		#respuesta
+			width 100%
+			border 2px solid dashed
+			#PRespuesta form p input
+				display inline-block
+				vertical-align top
+			#PRespuesta
+				display inline-block
+				margin 0
+				padding 0
+				vertical-align top
+				p
+					input 
+						font-size 5px;
+						float left
+				input
+					float right
+					font-size 8px;
+
+
+@media screen and (min-width:2000px)
+		#bienvenida h1 
+			font-size 60px;
+		#bienvenida p
+			font-size 30px
+		
+		#logo
+			padding 8px
+			margin 8px
+			border-radius 10%
+			background-color #f3f3f3
+			img
+				height 80px
+				width 80px
+		#social a
+			font-size 80px
+			
+/*************************/
