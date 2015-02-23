@@ -46,12 +46,12 @@
 
             <nav id="menu">
                 <ul>
-                    <li><a id="miguel" class="icon-menu3" href="#"></a></li>
+                    <li><a class="miguel icon-menu3" href="#"></a></li>
                 </ul>
             </nav>
             <nav id="menuD">
                 <ul>
-                    <li><a id="miguel1" href="#menuI">Menu</a></li>
+                    <li><a class="miguel" href="#">Menu</a></li>
                 </ul>
                 
             </nav>
@@ -111,7 +111,7 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eligendi porro officiis, reiciendis voluptate consequatur minima, illum saepe dolore dicta sit sapiente voluptates iusto facilis eos. Alias doloremque tempora deleniti.
                     </p>
                     <div id ="PRespuesta">
-                    <form action="">
+                    <form action="post">
                         <p>
                       <input placeholder="Ingrese su respuesta" id="titulo" type="text" name="respuesta"></p>
                         <input value="Publicar" type="submit" />
@@ -120,108 +120,31 @@
                         
                     </div>
                     </div>
-                    </article>
-                  <div id="publicacion">
-                  <article>
-                        <figure id="avatar">
-                            
-                        </figure>
-                  
-                    <div id="titulo">
-                        <h2>
-                            pregunta
-                        </h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate possimus aut, ullam quia reprehenderit velit esse error atque mollitia, itaque voluptatum minima necessitatibus, modi maxime, laboriosam magnam. Molestiae, cumque, dolores.</p>
-                    </div>
-                    <div id="respuesta">
-                    <div id="titulo">
-                        <h2>
-                            respuestas
-                        </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eligendi porro officiis, reiciendis voluptate consequatur minima, illum saepe dolore dicta sit sapiente voluptates iusto facilis eos. Alias doloremque tempora deleniti.
-                    </p>
-                    <div id ="PRespuesta">
-                    <form action="">
-                        <p>
-                      <input placeholder="Ingrese su respuesta" id="titulo" type="text" name="respuesta"></p>
-                        <input value="Publicar" type="submit" />
-                     </form>
-                    </div>
-                        
-                    </div>
-                    </div>
-                </article>
-                  <div id="publicacion">
-                  <article>
-                        <figure id="avatar">
-                            
-                        </figure>
-                  
-                    <div id="titulo">
-                        <h2>
-                            Pregunta
-                        </h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate possimus aut, ullam quia reprehenderit velit esse error atque mollitia, itaque voluptatum minima necessitatibus, modi maxime, laboriosam magnam. Molestiae, cumque, dolores.</p>
-                    </div>
-                    <div id="respuesta">
-                     <div id="titulo">
-                        <h2>
-                            respuestas
-                        </h2>
-                    <p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eligendi porro officiis, reiciendis voluptate consequatur minima, illum saepe dolore dicta sit sapiente voluptates iusto facilis eos. Alias doloremque tempora deleniti.
-                    </p>
-                    <div id ="PRespuesta">
-                    <form action="">
-                        <p>
-                      <input placeholder="Ingrese su respuesta" id="titulo" type="text" name="respuesta"></p>
-                        <input value="Publicar" type="submit" />
-                     </form>
-                    </div>
-                        
-                    </div>
-                    </div>
-                </article>
-                  <div id="publicacion">
-                  <article>
-                        <figure id="avatar">
-                            
-                        </figure>
-                  
-                    <div id="titulo">
-                        <h2>
-                            Pregunta
-                        </h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate possimus aut, ullam quia reprehenderit velit esse error atque mollitia, itaque voluptatum minima necessitatibus, modi maxime, laboriosam magnam. Molestiae, cumque, dolores.</p>
-                    </div>
-                    
-                     <div id="titulo">
-                        <h2>
-                            respuestas
-                        </h2>
-                    <p>
-                    <div id="respuesta">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eligendi porro officiis, reiciendis voluptate consequatur minima, illum saepe dolore dicta sit sapiente voluptates iusto facilis eos. Alias doloremque tempora deleniti.
-                    </p>
-                    <div id ="PRespuesta">
-                    <form action="">
-                        <p>
-                      <input placeholder="Ingrese su respuesta" id="titulo" type="text" name="respuesta"></p>
-                        <input value="Publicar" type="submit" />
-                     </form>
-                    </div>
-                        
-                    </div>
-                    </div>
-                </article>
+                    </article>        
             </section>
 
+        <script src"js/main.js"></script>
+        <script>
 
-        <script src="js/main.js"></script>
+             $(document).on('ready',function(){
+        $('.miguel').on('click', function(){
+            $('#menuI').slideToggle();
+            });
+            });
 
+
+
+             $('form').on('submit', procesarFormulario);
+             function procesarFormulario(ev) {
+            ev.preventDefault();
+            var respuesta = $('input[name=respuesta]').val();
+
+            $('.posts').prepend($('#titulo p').fadeIn());
+            $('input[type=text]').val('');
+            $('form').slideUp();
+        }
+
+        </script>    
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     </body>
